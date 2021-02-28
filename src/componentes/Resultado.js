@@ -6,6 +6,8 @@ class Resultado extends Component {
 
         const imagenes = this.props.imagenes;
 
+        console.log(this.props);
+
          if(imagenes.length === 0) return null;
        
          console.log(imagenes);
@@ -13,7 +15,7 @@ class Resultado extends Component {
          return(
              <React.Fragment>
                  <div className ="col-12 p-5 row">
-                   {imagenes.map(imagen =>(
+                   {imagenes.hits.map(imagen =>(
                        <Imagen
                        key={imagen.id}
                         imagen={imagen}
